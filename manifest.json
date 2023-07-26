@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Local Storage Viewer",
+  "name": "Simple Chrome Extension",
   "version": "1.0",
-  "description": "Displays items stored in localStorage",
+  "description": "Simple Chrome Extension",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
