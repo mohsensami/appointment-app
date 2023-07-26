@@ -2,8 +2,18 @@
   "manifest_version": 3,
   "name": "Simple Chrome Extension",
   "version": "1.0",
+  "permissions": ["storage", "activeTab"],
+  // "background": {
+  //   "service_worker": "background.js"
+  // },
+  "host_permissions": ["<all_urls>"],
+  // "content_scripts": [
+  //   {
+  //     "matches": ["<all_urls>"],
+  //     "js": ["content.js"]
+  //   }
+  // ],
   "description": "Simple Chrome Extension",
-  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
