@@ -85,3 +85,7 @@ document.getElementById("weather").addEventListener("click", function () {
       ).textContent = `Current weather: ${weather}, Temperature: ${temperature} °C`;
     });
 });
+
+document.getElementById("colorPicker").addEventListener("click", function () {
+  alert("colorPicker");
+});
