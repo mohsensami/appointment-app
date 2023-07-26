@@ -3,6 +3,7 @@
   "name": "Simple Chrome Extension",
   "version": "1.0",
   "description": "Simple Chrome Extension",
+  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
