@@ -4,7 +4,8 @@
   "info": {
     "singularName": "doctor",
     "pluralName": "doctors",
-    "displayName": "Doctor"
+    "displayName": "Doctor",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,45 @@
     "Name": {
       "type": "string",
       "required": true
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Patients": {
+      "type": "string"
+    },
+    "Year_of_experience": {
+      "type": "string"
+    },
+    "StartTime": {
+      "type": "time"
+    },
+    "EndTime": {
+      "type": "time"
+    },
+    "About": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Premium": {
+      "type": "boolean"
     }
   }
 }

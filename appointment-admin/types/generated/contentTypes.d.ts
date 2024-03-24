@@ -836,12 +836,27 @@ export interface ApiDoctorDoctor extends Schema.CollectionType {
     singularName: 'doctor';
     pluralName: 'doctors';
     displayName: 'Doctor';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Name: Attribute.String & Attribute.Required;
+    Address: Attribute.Text;
+    Patients: Attribute.String;
+    Year_of_experience: Attribute.String;
+    StartTime: Attribute.Time;
+    EndTime: Attribute.Time;
+    About: Attribute.Blocks;
+    categories: Attribute.Relation<
+      'api::doctor.doctor',
+      'oneToOne',
+      'api::category.category'
+    >;
+    Phone: Attribute.String;
+    Image: Attribute.Media;
+    Premium: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
