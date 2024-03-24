@@ -3,22 +3,22 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-// import GlobalApi from '../_utils/GlobalApi';
+import GlobalApi from '../_utils/GlobalApi';
 import Image from 'next/image';
 import Link from 'next/link';
 
 function CategorySearch() {
     const [categoryList, setCategoryList] = useState([]);
-    // useEffect(() => {
-    //     getCategoryList();
-    // }, []);
+    useEffect(() => {
+        getCategoryList();
+    }, []);
 
-    // const getCategoryList = () => {
-    //     GlobalApi.getCategory().then((resp) => {
-    //         console.log(resp.data.data);
-    //         setCategoryList(resp.data.data);
-    //     });
-    // };
+    const getCategoryList = () => {
+        GlobalApi.getCategory().then((resp) => {
+            console.log(resp.data.data);
+            setCategoryList(resp.data.data);
+        });
+    };
     return (
         <div className="mb-10 items-center px-5 flex flex-col gap-2">
             <h2
@@ -52,7 +52,7 @@ function CategorySearch() {
           gap-2 hover:scale-110 transition-all ease-in-out"
                                   >
                                       <Image
-                                          src={item.attributes?.Icon?.data.attributes?.url}
+                                          src={item?.attributes?.Icon?.data?.attributes?.url}
                                           alt="icon"
                                           width={40}
                                           height={40}
