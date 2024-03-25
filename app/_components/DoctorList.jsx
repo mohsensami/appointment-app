@@ -33,7 +33,7 @@ function DoctorList({ doctorList, heading = 'Popular Doctors' }) {
                                       className="text-[10px] bg-blue-100 p-1 rounded-full
                         px-2 text-primary"
                                   >
-                                      {doctor?.attributes?.categories.data[0]?.attributes?.Name}
+                                      {doctor?.attributes?.categories?.data?.attributes?.Name}
                                   </h2>
                                   <h2 className="font-bold">{doctor.attributes.Name}</h2>
                                   <h2 className="text-primary text-sm">{doctor.attributes?.Year_of_Experience}</h2>
