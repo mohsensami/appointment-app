@@ -1,10 +1,10 @@
 'use client';
 import { Button } from '@/components/ui/button';
-// import { LoginLink, LogoutLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
+import { LoginLink, LogoutLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-// import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 function Header() {
     const Menu = [
@@ -25,11 +25,11 @@ function Header() {
         },
     ];
 
-    // const { user } = useKindeBrowserClient();
+    const { user } = useKindeBrowserClient();
 
-    // useEffect(() => {
-    //     console.log(user);
-    // }, [user]);
+    useEffect(() => {
+        console.log(user);
+    }, [user]);
     return (
         <div
             className="flex items-center 
@@ -52,7 +52,7 @@ function Header() {
                 </ul>
             </div>
 
-            {false ? (
+            {user ? (
                 <Popover>
                     <PopoverTrigger>
                         {user?.picture ? (
@@ -92,10 +92,10 @@ function Header() {
                     </PopoverContent>
                 </Popover>
             ) : (
-                <a>
+                <LoginLink>
                     {' '}
                     <Button>Get Started</Button>
-                </a>
+                </LoginLink>
             )}
         </div>
     );
