@@ -1,17 +1,17 @@
 'use client';
 import GlobalApi from '@/app/_utils/GlobalApi';
 import React, { useEffect, useState } from 'react';
-// import {
-//     Command,
-//     CommandDialog,
-//     CommandEmpty,
-//     CommandGroup,
-//     CommandInput,
-//     CommandItem,
-//     CommandList,
-//     CommandSeparator,
-//     CommandShortcut,
-// } from '@/components/ui/command';
+import {
+    Command,
+    CommandDialog,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+} from '@/components/ui/command';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -31,7 +31,7 @@ function CategoryList() {
     };
     return (
         <div className="h-screen fixed mt-5 flex flex-col">
-            {/* <Command>
+            <Command>
                 <CommandInput placeholder="Type a command or search..." />
                 <CommandList className="overflow-visible">
                     <CommandEmpty>No results found.</CommandEmpty>
@@ -61,7 +61,7 @@ function CategoryList() {
                             ))}
                     </CommandGroup>
                 </CommandList>
-            </Command> */}
+            </Command>
         </div>
     );
 }
