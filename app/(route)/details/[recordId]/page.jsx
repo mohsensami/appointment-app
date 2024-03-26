@@ -2,7 +2,7 @@
 import GlobalApi from '@/app/_utils/GlobalApi';
 import React, { useEffect, useState } from 'react';
 import DoctorDetail from '../_components/DoctorDetail';
-// import DoctorSuggestionList from '../_components/DoctorSuggestionList';
+import DoctorSuggestionList from '../_components/DoctorSuggestionList';
 
 function Details({ params }) {
     const [doctor, setDoctor] = useState();
@@ -22,7 +22,9 @@ function Details({ params }) {
                 {/* Doctor Detail  */}
                 <div className=" col-span-3">{doctor && <DoctorDetail doctor={doctor} />}</div>
                 {/* Doctor Suggestion  */}
-                <div>{/* <DoctorSuggestionList /> */}</div>
+                <div>
+                    <DoctorSuggestionList />
+                </div>
             </div>
         </div>
     );

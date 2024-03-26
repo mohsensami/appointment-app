@@ -76,7 +76,7 @@ function DoctorDetail({ doctor }) {
             <div className="p-3 border-[1px] rounded-lg mt-5">
                 <h2 className="font-bold text-[20px]">About Me</h2>
                 <p className="text-gray-500 tracking-wide mt-2 text-wrap">
-                    {doctor?.attributes.About[0].children[0].text}
+                    {doctor?.attributes?.About[0]?.children[0]?.text ?? ''}
                 </p>
             </div>
         </>
