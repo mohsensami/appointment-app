@@ -15,7 +15,7 @@ import { CalendarDays, Clock } from 'lucide-react';
 import { Textarea } from '@/components/ui/textarea';
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 import GlobalApi from '@/app/_utils/GlobalApi';
-// import { toast } from 'sonner';
+import { toast } from 'sonner';
 
 function BookAppointment({ doctor }) {
     const [date, setDate] = useState(new Date());
@@ -67,7 +67,7 @@ function BookAppointment({ doctor }) {
                 GlobalApi.sendEmail(data).then((resp) => {
                     console.log(resp);
                 });
-                alert('Booking Confirmation sent on Email');
+                toast('Booking Confirmation sent on Email');
             }
         });
     };
